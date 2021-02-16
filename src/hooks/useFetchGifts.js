@@ -15,7 +15,7 @@ export const useFetchGifts = ( category ) => {
      getGifts(category)
        .then( imgs =>{
 
-        setTimeout(()=>{ //deje el settimeout para estilo porque el api responde rapido
+       // setTimeout(()=>{ //deje el settimeout para estilo porque el api responde rapido
         setstate({
                data:imgs,
                loading:false 
@@ -23,7 +23,7 @@ export const useFetchGifts = ( category ) => {
            });
              console.log(imgs)
 
-       },1000)
+      // },1000)
      })
           
 
@@ -34,3 +34,4 @@ export const useFetchGifts = ( category ) => {
      return state
 
 }
+

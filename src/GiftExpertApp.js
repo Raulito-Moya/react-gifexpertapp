@@ -2,10 +2,13 @@ import React, {useState} from "react"
 import ReactDOM from "react-dom"
 import {AddCategory} from './components/AddCategory'
 import { Giftgrid } from "./components/GiftGrid";
-const GiftExpertApp = ()=>{
 
-    //const categories =[ 'One Punch', 'Samurai X', 'Dragon Ball'];
-     const [categories, setCategories] = useState([ 'One Punch']);
+
+export const GiftExpertApp = ({ defaultCategories = [] })=>{  //este default categorie se puso para hacer el eejemplo de la prueba
+
+ 
+    // const [categories, setCategories] = useState([ 'One Punch']);
+     const [categories, setCategories] = useState(defaultCategories);
       /*const handleAdd = ()=>{
          
                //setCategories([...categories, 'Naruto']) tmbien puede tener un callback que es el estado anterior
@@ -23,7 +26,7 @@ const GiftExpertApp = ()=>{
                   ))
               }
          
-     </>
+           </>
    
 
       

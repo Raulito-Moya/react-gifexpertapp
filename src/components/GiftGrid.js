@@ -1,5 +1,6 @@
 import React  from 'react'
-import ReactDOM from "react-dom"
+import Proptypes from 'prop-types';
+import ReactDOM from "react-dom";
 import { useFetchGifts } from '../hooks/useFetchGifts'
 // import { getGifts } from '../helpers/getGifs'
 import { GiftGridItem } from './GiftGridItem'
@@ -9,7 +10,7 @@ export const Giftgrid = ({category}) => {
 
  const {data:images, loading } = useFetchGifts( category );
 
-   console.log(loading)
+ 
 
     return ( 
         <>
@@ -22,7 +23,6 @@ export const Giftgrid = ({category}) => {
            
                       images.map( (img) =>( 
                         <GiftGridItem 
-                        load={loading}
                         key={img.id}
                         {...img}
                          />
@@ -33,6 +33,11 @@ export const Giftgrid = ({category}) => {
         
         </>
     )
+}
+
+Giftgrid.propTypes ={
+    
+  category: Proptypes.string.isRequired
 }
 
 

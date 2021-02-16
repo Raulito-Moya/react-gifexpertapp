@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const GiftGridItem = ({title,url}) => {
   
@@ -9,6 +10,12 @@ export const GiftGridItem = ({title,url}) => {
            
             <img src={url} alt={title}/>
             <p>{ title }</p>
+            
         </div>
     )
+}
+
+GiftGridItem.propTypes ={
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
 }

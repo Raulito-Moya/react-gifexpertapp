@@ -3,20 +3,20 @@ import PropTypes from 'prop-types'
 
 export const AddCategory = ({setCategories}) => {
  
-    const [inputValue, setInputvalue] = useState();
+    const [inputValue, setInputvalue] = useState('');
 
 
 
     const handleInputChange =( e ) =>{ //da el valor mientras cambie en el form
-        console.log(e.target.value)
 
         setInputvalue(e.target.value)
+      
         
     }
 
-    const handleSubmit = (e) =>{ //hace le submit
+    const handleSubmit = (e) =>{   //hace le submit
            e.preventDefault(); //para prevenir el comportamiento por defecto del Form
-         // console.log('Submit hecho')
+          console.log('handleSubmit', inputValue)
 
          if(inputValue.trim().length > 2){
 
@@ -35,6 +35,7 @@ export const AddCategory = ({setCategories}) => {
         
          <form onSubmit={handleSubmit}>
             <h2>Add Category</h2>
+            <p>{inputValue}</p>
             <input 
             type="text" 
             value={inputValue}
@@ -46,7 +47,7 @@ export const AddCategory = ({setCategories}) => {
 }
 
 
-AddCategory.propTypes ={
+/*AddCategory.propTypes ={
      setCategories: PropTypes.func.isRequired
 
-}
+}*/
