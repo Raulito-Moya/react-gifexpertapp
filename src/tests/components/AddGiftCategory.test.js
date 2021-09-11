@@ -1,18 +1,18 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 import '@testing-library/jest-dom';
-import {AddCategory} from '../../components/AddCategory'
+import {AddGiftCategory} from '../../components/AddGiftCategory'
 
 
 
 describe('Pruebas en <AddCategory/>',()=>{
 
      const setCategories = jest.fn() //esto lo ponga para que jest me mande la funcionalidad de la funcion o sea como se hizo y demas
-     let wrapper = shallow( <AddCategory setCategories={setCategories}/>)
+     let wrapper = shallow( <AddGiftCategory setCategories={setCategories}/>)
 
      beforeEach( ()=> { //este es como el siglo de vida de la funcioan es para que se renicialize cada cosa antes de entrar a cada prueba
         jest.clearAllMocks();  //esto se hace si estamos creando funciones en jest
-        wrapper = shallow( <AddCategory setCategories={setCategories}/>)
+        wrapper = shallow( <AddGiftCategory setCategories={setCategories}/>)
 
      })
 

@@ -2,7 +2,7 @@ import { shallow } from 'enzyme'
 import '@testing-library/jest-dom';
 import React from 'react'
 import { GiftNet } from '../../components/GiftNet'
-import { useFetchGifts} from '../../hooks/useFetchGifts'
+import { useGiftsFecth} from '../../hooks/useGiftsFetch'
 jest.mock('../../hooks/useFetchGifts'); //se finja cualquier llamada a ese archivo y suponer y controlar la informacion
 
 
