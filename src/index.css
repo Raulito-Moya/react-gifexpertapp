@@ -3,6 +3,7 @@
 
 }
 body{
+  background-color: black;
   padding-left: 60px;
 }
 
@@ -11,6 +12,16 @@ input{
    font-size: 1.2rem;
    color: gray;
 }
+
+h2{
+color: pink;
+
+}
+
+h3{
+  color: pink;
+  
+  }
 
 .card-grid{
   display: flex;

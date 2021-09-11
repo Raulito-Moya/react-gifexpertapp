@@ -1,10 +1,10 @@
 import React, {useState} from "react"
 import ReactDOM from "react-dom"
-import {AddCategory} from './components/AddCategory'
-import { Giftgrid } from "./components/GiftGrid";
+import {AddGiftCategory} from './components/AddGiftCategory'
+import { GiftNet } from "./components/GiftNet";
 
 
-export const GiftExpertApp = ({ defaultCategories = [] })=>{  //este default categorie se puso para hacer el eejemplo de la prueba
+export const GiftsApp = ({ defaultCategories = [] })=>{  //este default categorie se puso para hacer el eejemplo de la prueba
 
  
     // const [categories, setCategories] = useState([ 'One Punch']);
@@ -16,13 +16,13 @@ export const GiftExpertApp = ({ defaultCategories = [] })=>{  //este default cat
       }*/
      return <>
           <h2>GiftExpertApp</h2>
-          <AddCategory setCategories={setCategories}/>
+          <AddGiftCategory setCategories={setCategories}/>
           <hr />
          
               {  
                   categories.map( (category) =>(
                      
-                     <Giftgrid key={category} category={category}/>
+                     <GiftNet key={category} category={category}/>
                   ))
               }
          
@@ -32,4 +32,4 @@ export const GiftExpertApp = ({ defaultCategories = [] })=>{  //este default cat
       
 }
 
-export default GiftExpertApp
+export default GiftsApp

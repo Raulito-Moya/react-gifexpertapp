@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import PropTypes from 'prop-types'
 
-export const AddCategory = ({setCategories}) => {
+export const AddGiftCategory = ({setCategories}) => {
  
     const [inputValue, setInputvalue] = useState('');
 

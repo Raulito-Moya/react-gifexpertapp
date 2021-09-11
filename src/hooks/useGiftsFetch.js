@@ -1,8 +1,8 @@
 import {useState ,useEffect} from 'react'
-import { getGifts } from '../helpers/getGifs'
+import { getGiftsForGiftAPi } from '../helpers/getGifsForGiftAPI'
 
 
-export const useFetchGifts = ( category ) => {
+export const useGiftsFetch = ( category ) => {
 
    const [state, setstate] = useState({
         
@@ -12,7 +12,7 @@ export const useFetchGifts = ( category ) => {
 
   useEffect( ()=>{
        
-     getGifts(category)
+   getGiftsForGiftAPi(category)
        .then( imgs =>{
 
        // setTimeout(()=>{ //deje el settimeout para estilo porque el api responde rapido
@@ -21,13 +21,13 @@ export const useFetchGifts = ( category ) => {
                loading:false 
                
            });
-             console.log(imgs)
+           //  console.log(imgs)
 
       // },1000)
      })
           
 
-  }, [category])  //el array es una lista de dependecinas es com el componentdidMount en react con clases ,hace que el compoenente se dispara una sola vez o sea sia l acategoria cambia
+  }, [category])  
    
  
  

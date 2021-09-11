@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import GiftExpertApp from './GiftExpertApp'
+import GiftsApp from './GiftApp'
 
 
 
 ReactDOM.render(
-  <GiftExpertApp/>,
+  <GiftsApp/>,
   document.getElementById('root')
 );
 

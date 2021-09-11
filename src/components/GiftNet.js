@@ -1,14 +1,14 @@
 import React  from 'react'
 import Proptypes from 'prop-types';
 import ReactDOM from "react-dom";
-import { useFetchGifts } from '../hooks/useFetchGifts'
+import { useGiftsFetch } from '../hooks/useGiftsFetch'
 // import { getGifts } from '../helpers/getGifs'
-import { GiftGridItem } from './GiftGridItem'
+import { GiftItem } from './GiftItem'
 
-//nota importamos useeffect ya que con el  eejemplo del count al dar click en el boton React intrpreta que hay un cambio en los eleementos y lee el codigo nuevamente y pasa el proceso de el fetch de nuevo
-export const Giftgrid = ({category}) => {
 
- const {data:images, loading } = useFetchGifts( category );
+export const GiftNet = ({category}) => {
+
+ const {data:images, loading } = useGiftsFetch( category );
 
  
 
@@ -22,7 +22,7 @@ export const Giftgrid = ({category}) => {
               {   
            
                       images.map( (img) =>( 
-                        <GiftGridItem 
+                        <GiftItem 
                         key={img.id}
                         {...img}
                          />
@@ -35,7 +35,7 @@ export const Giftgrid = ({category}) => {
     )
 }
 
-Giftgrid.propTypes ={
+GiftNet.propTypes ={
     
   category: Proptypes.string.isRequired
 }

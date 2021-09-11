@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import '@testing-library/jest-dom';
 import React from 'react'
-import { Giftgrid } from '../../components/GiftGrid'
+import { GiftNet } from '../../components/GiftNet'
 import { useFetchGifts} from '../../hooks/useFetchGifts'
 jest.mock('../../hooks/useFetchGifts'); //se finja cualquier llamada a ese archivo y suponer y controlar la informacion
 
@@ -40,7 +40,7 @@ describe('Pruebas en <GiftGrid />', ()=>{
         loading:false
      })
                                                                                    
-     const wrapper = shallow( <Giftgrid  category={category}/>)
+     const wrapper = shallow( <GiftNet  category={category}/>)
 
      expect( wrapper ).toMatchSnapshot()
      expect( wrapper.find('p').exists() ).toBe(false);
